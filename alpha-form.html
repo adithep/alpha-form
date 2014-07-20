@@ -1,0 +1,106 @@
+<template name="_t_path">
+  {{#with path}}
+    {{#each t_yield}}
+      {{>_sel_spa}}
+    {{/each}}
+    {{#each t_sub}}
+      {{>_t_path}}
+    {{/each}}
+  {{/with}}
+</template>
+
+<template name="_t_space">
+  {{#each t_spa}}
+    {{>_t_group}}
+  {{/each}}
+</template>
+
+<template name="_t_group">
+  <div class="parent_div">
+    {{#each t_gr}}
+      {{>_parent_t}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="_parent_t">
+  {{#each t_data}}
+    {{> t_tem}}
+  {{/each}}
+</template>
+
+<template name="_option_t">
+  <div {{div_dyn}} class="parent_div {{div_attrs.class}} {{div_class}}">
+    {{#each t_data}}
+      {{> _string_select_options}}
+    {{/each}}
+  </div>
+</template>
+
+
+<template name="_schema_buttons">
+  <a {{_btn_dyn}} class="{{_btn_attrs.class}} {{_btn_class}}">
+    {{this.key_dis}}
+  </a>
+</template>
+
+<template name="button_list">
+
+  <nav {{nav_dyn}} class="form_nav {{nav_attrs.class}} {{nav_class}}">
+    {{#each schema_buttons}}
+      {{>_t_group}}
+    {{/each}}
+  </nav>
+
+</template>
+
+<template name="insert_form">
+  <form {{form_dyn}} class="contact_form {{form_attrs.class}} {{form_class}}">
+    {{#each input_element}}
+      {{>_t_group}}
+    {{/each}}
+    <br><br>
+    <a {{submit_dyn}} class="form_submit {{submit_attrs.class}} {{submit_class}}">Submit</a>
+  </form>
+
+</template>
+
+<template name="_each_input_master">
+  <div class="_each_input_master">
+    {{#each tri_gate}}
+      {{>_each_input}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="_each_input">
+  <div {{div_dyn}} class="{{div_attrs.class}} {{div_class}}">
+    {{#if this.span_attrs}}
+      <span {{span_dyn}} class="{{span_attrs.class}} {{span_class}}">Î</span>
+    {{/if}}
+    <input
+      {{input_dyn}}
+      type="{{input_attrs.type}}"
+      placeholder="{{this.key_dis}}"
+      class="{{input_attrs.class}} {{input_class}}"
+      value="{{input_value}}"
+    >
+    <div class="{{select_attrs.class}} {{select_class}}">
+      {{#each select_options}}
+        {{>_option_t}}
+      {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="_key_dis">
+  <span>{{this.key_dis}}</span>
+</template>
+
+<template name="_string_select_options">
+  {{#if this.href}}
+    <a href="{{make_href}}" class="{{../../option_attrs.class}} {{span_class}}">{{h_opt}}</a>
+  {{else}}
+    <a class="{{../../option_attrs.class}} {{span_class}}">{{h_opt}}</a>
+  {{/if}}
+</template>

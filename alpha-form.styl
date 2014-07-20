@@ -1,0 +1,130 @@
+@import 'alpmixins'
+@import 'jeet'
+
+.form_nav
+  padding 0
+  box-shadow(1px 1px 2px rgba(0,0,0,.55))
+  margin 9px 0 0 0
+  display inline-block
+  background $brown
+  border-radius(5px)
+
+.form_nav .parent_div a
+  border-left 1px solid $black
+  display inline-block
+  color $text-white
+  padding 25px 5px
+  &:first-child
+    border-left none
+  @media screen and (max-width: 600px)
+    display block
+    border-left none
+    border-bottom 1px solid $black
+    &:last-child
+      border-bottom none
+
+.contact_div
+  position relative
+  display inline-block
+  margin-right -4px
+  width 210px
+  height 35px
+
+.contact_form div.parent_div
+  display inline-block
+  margin-right 9px
+  margin-bottom 5px
+
+.contact_form div.div_select div.parent_div
+  display block
+  margin 0
+
+input.input_ui
+  width 100%
+  padding 5px 20px
+  height 100%
+  padding-right 35px
+  border-left 1px solid $black
+  box-sizing()
+
+.contact_div:first-child input.input_ui
+  border-top-left-radius 20px
+  border-bottom-left-radius 20px
+  border-left none
+
+.contact_div:last-child input.input_ui
+  border-top-right-radius 20px
+  border-bottom-right-radius 20px
+
+a.input_ui
+  display block
+  border-top 1px solid $text-white
+
+
+div.div_select
+  display inline-block
+  visibility hidden
+  opacity 0
+  position absolute
+  z-index -1
+  width 80%
+  top 0px
+  left 20px
+  transition(all .2s)
+
+div.div_select.show
+  visibility visible
+  top 35px
+  z-index 1
+  opacity 1
+
+
+
+.contact_form
+  margin 20px 0
+  center(max_width = 1410px)
+
+.input_ui
+  -webkit-font-smoothing antialiased
+  outline none
+  border none
+  background $brown
+  color $text-white
+  font-size .9em
+  line-height 25px
+  resize none
+
+.select_option.glow
+  text-shadow: 1px 1px 1px black, 0 0 1em blue, 0 0 0.2em blue
+.contact_div span+input
+  padding-left 35px
+  margin 0
+span.s_liga
+  display none
+  position absolute
+  width 25px
+  right 5px
+  height 25px
+  margin 5px 0 0 5px
+  background $yellow
+  color $text-black
+  text-align center
+  font-family "liga"
+  font-size 20px
+  border-radius(50%)
+  line-height 27px
+.contact_div:last-child span.s_liga
+  display block
+.adropdown
+  display none
+  background $brown
+  position absolute
+
+.adropdown.show
+  display block
+
+.adropdown a
+  color $text-white
+
+.adropdown li
+  border-bottom 1px solid $black
