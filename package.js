@@ -5,12 +5,11 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use([
     'coffeescript',
-    'alpha-stylus',
+    'stylus',
     'standard-app-packages',
     'core-lib',
     'underscore',
-    'jquery',
-    'layout']);
+    'alpha-layout']);
   api.add_files([
     'alpha-form.html',
     'alpha-form.coffee',
