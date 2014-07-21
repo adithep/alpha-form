@@ -14,8 +14,7 @@ Package.on_use(function (api, where) {
     'alpha-form.html',
     'alpha-form.coffee',
     'form-helpers.coffee',
-    'form-events.coffee',
-    'alpha-form.styl'], 'client');
+    'form-events.coffee'], 'client');
 });
 
 Package.on_test(function (api) {
