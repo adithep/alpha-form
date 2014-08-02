@@ -5,7 +5,7 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use([
     'coffeescript',
-    'stylus',
+    'alpha-stylus',
     'standard-app-packages',
     'core-lib',
     'underscore',

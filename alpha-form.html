@@ -1,33 +1,4 @@
-<template name="_t_path">
-  {{#with path}}
-    {{#each t_yield}}
-      {{>_sel_spa}}
-    {{/each}}
-    {{#each t_sub}}
-      {{>_t_path}}
-    {{/each}}
-  {{/with}}
-</template>
 
-<template name="_t_space">
-  {{#each t_spa}}
-    {{>_t_group}}
-  {{/each}}
-</template>
-
-<template name="_t_group">
-  <div class="parent_div">
-    {{#each t_gr}}
-      {{>_parent_t}}
-    {{/each}}
-  </div>
-</template>
-
-<template name="_parent_t">
-  {{#each t_data}}
-    {{> t_tem}}
-  {{/each}}
-</template>
 
 <template name="_option_t">
   <div {{div_dyn}} class="parent_div {{div_attrs.class}} {{div_class}}">
