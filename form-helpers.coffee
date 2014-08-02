@@ -15,8 +15,6 @@ Template.button_list.helpers
   schema_buttons: ->
     LDATA.find(_sid: @_id, _s_n: "_gr")
 
-
-
 Template._each_input.helpers
   input_value: ->
     parent = UI._parentData(1)
