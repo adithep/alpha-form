@@ -1,15 +1,18 @@
 Package.describe({
-  summary: "Provides form functionality"
+  summary: "Provides form functionality",
+  version: "0.0.1"
 });
 
 Package.on_use(function (api, where) {
+  api.versionsFrom("METEOR-CORE@0.9.0-atm");
   api.use([
-    'coffeescript',
-    'alpha-stylus',
+    'bads:alpha-stylus',
+    'bads:alpha-layout',
+    'bads:core-lib',
     'standard-app-packages',
-    'core-lib',
     'underscore',
-    'alpha-layout']);
+    'coffeescript',
+  ]);
   api.add_files([
     'alpha-form.html',
     'alpha-form.coffee',
@@ -18,7 +21,7 @@ Package.on_use(function (api, where) {
 });
 
 Package.on_test(function (api) {
-  api.use('alpha-form');
+  api.use("../packages/bads:alpha-form");
 
   api.add_files('alpha-form_tests.js', ['client', 'server']);
 });
