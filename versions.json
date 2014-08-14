@@ -14,7 +14,7 @@
     ],
     [
       "autoupdate",
-      "1.0.1"
+      "1.0.2"
     ],
     [
       "bads:alpha-auth",
@@ -46,7 +46,7 @@
     ],
     [
       "blaze",
-      "1.0.1"
+      "1.0.0"
     ],
     [
       "blaze-tools",
@@ -106,7 +106,7 @@
     ],
     [
       "livedata",
-      "1.0.1"
+      "1.0.0"
     ],
     [
       "localstorage",
@@ -126,7 +126,7 @@
     ],
     [
       "minimongo",
-      "1.0.1"
+      "1.0.0"
     ],
     [
       "mongo-livedata",
@@ -138,7 +138,7 @@
     ],
     [
       "observe-sequence",
-      "1.0.1"
+      "1.0.0"
     ],
     [
       "ordered-dict",
@@ -194,7 +194,7 @@
     ],
     [
       "templating",
-      "1.0.2"
+      "1.0.0"
     ],
     [
       "ui",
@@ -210,6 +210,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.8",
+  "toolVersion": "meteor-tool@1.0.10",
   "format": "1.0"
 }
