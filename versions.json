@@ -14,7 +14,7 @@
     ],
     [
       "autoupdate",
-      "1.0.3"
+      "1.0.4"
     ],
     [
       "bads:alpha-auth",
@@ -46,7 +46,7 @@
     ],
     [
       "blaze",
-      "1.0.2"
+      "1.0.3"
     ],
     [
       "blaze-tools",
@@ -66,7 +66,7 @@
     ],
     [
       "deps",
-      "1.0.0"
+      "1.0.1"
     ],
     [
       "ejson",
@@ -106,7 +106,7 @@
     ],
     [
       "livedata",
-      "1.0.4"
+      "1.0.6"
     ],
     [
       "localstorage",
@@ -130,7 +130,7 @@
     ],
     [
       "mongo-livedata",
-      "1.0.2"
+      "1.0.3"
     ],
     [
       "npm-bcrypt",
@@ -210,6 +210,6 @@
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.12",
+  "toolVersion": "meteor-tool@1.0.14",
   "format": "1.0"
 }
