@@ -1,6 +1,7 @@
 Package.describe({
   summary: "Provides form functionality",
-  version: "0.0.1"
+  version: "0.0.1",
+  name: "bads:alpha-form"
 });
 
 Package.on_use(function (api, where) {
@@ -21,7 +22,7 @@ Package.on_use(function (api, where) {
 });
 
 Package.on_test(function (api) {
-  api.use("../packages/bads:alpha-form");
+  api.use("bads:alpha-form");
 
   api.add_files('alpha-form_tests.js', ['client', 'server']);
 });
